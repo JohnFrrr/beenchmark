@@ -20,7 +20,7 @@ COPY . .
 RUN cargo build --release
 
 # Stage 2: Prepare the final minimal image
-FROM debian:buster-slim
+FROM docker.io/debian:buster-slim
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
