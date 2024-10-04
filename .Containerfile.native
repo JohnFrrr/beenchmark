@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY Cargo.toml Cargo.lock ./
 
 # Create a dummy main file to get dependencies first (optional, but speeds up build)
-RUN mkdir src && echo "fn main() {}" > src/main.rs
+RUN sh -c "mkdir src && echo 'fn main() {}' > src/main.rs"
 
 # Fetch and compile dependencies
 RUN cargo fetch && cargo build --release
