@@ -1,0 +1,3 @@
+FROM scratch
+COPY beenchmark_aot.wasm .
+ENTRYPOINT [ "/beenchmark_aot.wasm" ]

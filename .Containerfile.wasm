@@ -1,0 +1,3 @@
+FROM scratch
+COPY beenchmark.wasm .
+ENTRYPOINT [ "/beenchmark.wasm" ]
